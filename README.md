@@ -3,11 +3,17 @@ with webpack, webpack-dev-server, babel-loader
 
 ## 使用方式 ##
 
-1.  安裝相關套件
+1.  下載 react-template
+    
+    > git clone https://github.com/FayeHuang/react-template.git
+    
+    > cd react-template
+
+2.  安裝相關套件
 
     > npm install
 
-2.  啟動 webpack-dev-server
+3.  啟動 webpack-dev-server
 
     > PORT=8080 npm start
 
