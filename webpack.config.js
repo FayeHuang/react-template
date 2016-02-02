@@ -57,6 +57,14 @@ if(TARGET === 'start' || !TARGET) {
       // Parse host and port from env so this is easy to customize.
       host: process.env.HOST || '0.0.0.0',
       port: process.env.PORT || 8080,
+      
+      // proxy ajax api
+      proxy: {
+        '/api/*': {
+          target: process.env.MOCK_SERVER || 'http://127.0.0.1:8888',
+          secure: false,
+        },
+      }
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
